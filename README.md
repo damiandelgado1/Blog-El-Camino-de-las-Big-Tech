@@ -33,4 +33,4 @@ blog_bigtech/           # Blog about History and path the Big Tech
 
 ### Upcomming Implementations
 
-It soon updates is a add content in page with Template's for view content of the Blog and Site
+It soon implementation the CSS in the Project
