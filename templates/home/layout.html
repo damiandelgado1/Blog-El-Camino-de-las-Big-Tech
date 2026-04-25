@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Blog El Camino de las Big Tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Header with Name Blog -->
+    <header>
+        {% include '_includes/header.html' %}
+    </header>
+
+    <!-- Main content of the Blog -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Display the Blog's by site -->
+    <section>
+        {% block blog %}{% endblock %}
+    </section>
+
+    <!-- Footer with suscribe form and copyright -->
+    <footer>
+        {% include 'home/form.html' %}
+        {% include '_includes/footer.html' %}
+    </footer>
+</body>
+</html>

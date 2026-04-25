@@ -1,0 +1,9 @@
+<h3>Formulario de Suscripcion al Blog</h3>
+
+<form method="POST">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="Submit">Suscribirse</button>
+
+</form>

@@ -1,0 +1,19 @@
+{% extends 'home/layout.html' %}
+
+{% block title %} Inicio - Blog sobre El Camino de las Big Tech {% endblock%}
+
+{% block content %}
+
+    <h1>El Camino de las Big Tech</h1>
+
+    <p>En este Blog se comparten y ven los caminos de las Empresas
+        mas relevantes en el <strong> Sector Tecnologico </strong> y
+        la <strong> Industria del Desarrollo</strong> de Software,
+        contando sus Existos, sus Fallas y Competencia entre si
+    </p>
+
+{% endblock %}
+
+{% block blog %}
+    {% include 'blog/list_blog.html' %}
+{% endblock %}

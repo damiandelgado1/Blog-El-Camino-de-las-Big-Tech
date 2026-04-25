@@ -4,6 +4,6 @@ from blog.models import Blog
 # Admin panel
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ["name", "description", "created_at"]
-    list_filter = ["name", "created_at"]
-    search_fields = ["name"]
+    list_display = ["name", "image", "category", "content", "created_at"]
+    list_filter = ["name", "category", "created_at"]
+    search_fields = ["name", "category"]

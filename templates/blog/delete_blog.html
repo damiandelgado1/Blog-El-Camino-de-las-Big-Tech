@@ -1,0 +1,15 @@
+{% extends 'home/layout.html' %}
+
+{% block title %} {{blog.name}} {% endblock %}
+
+{% block content%}
+
+    <h3>¿Quieres Eliminar el Blog?</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Eliminar Blog</button>
+    </form>
+
+{% endblock %}

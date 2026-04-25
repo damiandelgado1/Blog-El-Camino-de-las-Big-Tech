@@ -1,16 +1,8 @@
 from django.shortcuts import render
+from blog.forms import SuscribeForm
+from blog.models import Blog
 
-def blog_list(request):
-    return render(request, "")
-
-def blog_detail(request):
-    return render(request, "")
-
-def create_blog(request):
-    return render(request, "")
-
-def modify_blog(request):
-    return render(request, "")
-
-def delete_blog(request):
-    return render(request, "")
+def main_page(request):
+    form = SuscribeForm()
+    blogs = Blog.objects.all()
+    return render(request, "home/home.html", {"form": form, "blog": blogs})
