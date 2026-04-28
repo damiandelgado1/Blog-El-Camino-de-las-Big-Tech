@@ -8,8 +8,8 @@
         <p> Categoria: {{ blog.category }} </p>
         <p> {{ blog.content }} </p>
         <p> Fecha de Creacion: {{ blog.created_at }} </p>
+        <a href="{% url 'blog:delete_blog' blog.pk %}">Eliminar el Blog</a> <br>
         <a href="{% url 'home' %}">Volver al Inicio</a>
-        <a href="{% url 'blog:delete_blog' blog.pk %}">Eliminar el Blog</a>
     </article>
 
 {% endblock %}
