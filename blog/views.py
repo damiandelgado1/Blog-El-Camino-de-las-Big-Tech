@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from .models import Blog
-from django.contrib import messages
 
 
 # Display Blog's
