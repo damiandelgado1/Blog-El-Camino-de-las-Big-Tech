@@ -6,5 +6,6 @@ urlpatterns = [
     path('', main_page, name="home"),
     path('form/', form_suscribe, name="form"),
     path('blog/', include('blog.urls', namespace="blog")),
+    path('category/', include('category.urls', namespace="category")),
     path('admin/', admin.site.urls),
 ]
