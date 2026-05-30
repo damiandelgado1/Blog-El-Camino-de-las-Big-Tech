@@ -1,13 +1,13 @@
-{% block title %} {{blog.name}} {% endblock %}
+{% load static %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Akronim&family=GFS+Didot&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 
-{% block content%}
+<h3>¿Quieres Eliminar el Blog {{ blog.name }}?</h3>
 
-    <h3>¿Quieres Eliminar el Blog?</h3>
-
-    <form method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Eliminar Blog</button>
-    </form>
-
-{% endblock %}
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Eliminar Blog</button>
+</form>
