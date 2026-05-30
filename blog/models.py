@@ -5,7 +5,7 @@ from category.models import Category
 # Content Blog
 class Blog(models.Model):
     name = models.CharField(max_length=50, verbose_name="Nombre del Blog")
-    image = models.ImageField(upload_to="", blank=True, null=True, verbose_name="Imagen del Blog")
+    image = models.ImageField(upload_to="", blank=True, verbose_name="Imagen del Blog")
     preview = models.TextField(verbose_name="Contenido preview")
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="blogs", verbose_name="Categoria del Blog")
     content = models.TextField(verbose_name="Descripcion del Blog")

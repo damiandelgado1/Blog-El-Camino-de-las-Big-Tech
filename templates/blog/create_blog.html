@@ -1,7 +1,8 @@
 <h3> Crear nuevo Blog </h3>
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 
+    {{ form.errors}}
     {% csrf_token %}
 
     <div>
@@ -13,6 +14,12 @@
     <div>
         <label for="{{ form.image.id_for_label }}"> IMAGEN DEL BLOG </label> <br>
         {{ form.image }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.preview.id_for_label }}"> PREVIEW DEL BLOG </label> <br>
+        {{ form.preview }}
     </div>
     <br>
 

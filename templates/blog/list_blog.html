@@ -3,7 +3,7 @@
 
         <article>
             <h3> {{ blog.name }} </h3>
-            <img src="{{ blog.image }}"></img>
+            <img src="{{ blog.image.url }}"></img>
             <p> Categoria: {{ blog.category }} </p>
             <p> Fecha de Creacion: {{ blog.created_at }} </p>
             <a href="{% url 'blog:blog_detail' blog.pk %}"> Ver Mas </a>
