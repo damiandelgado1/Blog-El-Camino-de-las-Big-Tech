@@ -3,7 +3,37 @@
 <form method="POST">
 
     {% csrf_token %}
-    {{ form.as_p }}
+
+    <div>
+        <label for="{{ form.name.id_for_label }}"> NOMBRE DEL BLOG </label> <br>
+        {{ form.name }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.image.id_for_label }}"> IMAGEN DEL BLOG </label> <br>
+        {{ form.image }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.category.id_for_label }}"> CATEGORIA </label> <br>
+        {{ form.category }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.content.id_for_label }}"> CONTENIDO </label> <br>
+        {{ form.content }}
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.created_at.id_for_label }}"> CREADO EN </label> <br>
+        {{ form.created_at }}
+    </div>
+    <br>
+
     <button type="sumit"> Crear Blog </button>
 
 </form>
