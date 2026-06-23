@@ -6,7 +6,7 @@
 
 <h3> Crear nuevo Blog </h3>
 
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data" class="create-blog">
 
     {{ form.errors}}
     {% csrf_token %}
@@ -41,12 +41,6 @@
     </div>
     <br>
 
-    <div>
-        <label for="{{ form.created_at.id_for_label }}"> CREADO EN </label> <br>
-        {{ form.created_at }}
-    </div>
-    <br>
-
-    <button type="sumit"> Crear Blog </button>
+    <button type="sumit" class="blog-create"> CREAR BLOG </button>
 
 </form>

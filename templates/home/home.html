@@ -1,14 +1,14 @@
-{% extends 'home/layout.html' %}
-
-{% block title %} Inicio - Blog sobre El Camino de las Big Tech {% endblock%}
+{% extends "home/layout.html" %}
 
 {% block content %}
 
-    <p> En este Blog te compartiremos los caminos que han tenido las Empresas <br> 
+    <p class="description-blog"> En este Blog te compartiremos los caminos que han tenido las Empresas <br> 
         Big Tech en el Sector Tech, tanto sus existos como sus fallas
     </p>
 
-    <a href="{% url 'blog:create_blog' %}">Crear nuevo Blog</a>
-    <a href="{% url 'category:create_category' %}">Crear categoria</a>
-    
+    <nav>
+        <a href="{% url 'blog:create_blog' %}" class="create">Crear nuevo Blog</a>
+        <a href="{% url 'category:create_category' %}" class="create">Crear categoria</a>
+    </nav>
+
 {% endblock %}

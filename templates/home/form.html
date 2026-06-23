@@ -1,9 +1,33 @@
 <h3>Formulario de Suscripcion al Blog</h3>
 
-<form method="POST">
+<form method="POST" action="" class="suscribe-blog">
 
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="Submit">Suscribirse</button>
+
+    <div>
+        <label for="{{ form.first_name.id_for_label }}"> NOMBRE </label> <br>
+        <div class="input-car">
+            {{ form.first_name }}
+        </div>
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.last_name.id_for_label }}"> APELLIDO </label> <br>
+        <div class="input-car">
+            {{ form.last_name }}
+        </div>
+    </div>
+    <br>
+
+    <div>
+        <label for="{{ form.email.id_for_label }}"> EMAIL </label> <br>
+        <div class="input-car">
+            {{ form.email }}
+        </div>
+    </div>
+    <br>
+
+    <button type="Submit" class="blog-suscribe"> SUSCRIBIRSE </button>
 
 </form>
