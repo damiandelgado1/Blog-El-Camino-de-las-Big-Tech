@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from .views import main_page, form_suscribe
 
+
 urlpatterns = [
     path('', main_page, name="home"),
     path('form/', form_suscribe, name="form"),

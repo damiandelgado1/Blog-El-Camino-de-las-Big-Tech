@@ -4,10 +4,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Akronim&family=GFS+Didot&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<h3>¿Quieres Eliminar el Blog {{ blog.name }}?</h3>
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit" class="delete-blog"> ELIMINAR BLOG </button>
-</form>
+<section class="categories">
+
+    {% for category in categories %}
+
+        <article>
+            <a href="#" class="category" data-category="{{ category.name_category }}"> {{ category.name_category }} </a>
+        </article>
+
+    {% endfor %}
+
+</section>

@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from blog.forms import SuscribeForm
 from blog.models import Blog
+from category.models import Category
 from django.contrib import messages
 
 
@@ -8,15 +10,8 @@ from django.contrib import messages
 def main_page(request):
     form = SuscribeForm()
     blogs = Blog.objects.all()
-    return render(request, "home/home.html", {"form": form, "blogs": blogs})
-
-
-# Filter content by Category
-def filter_category(request, category):
-    blogs = Blog.objects.filter(category=category)
-    category = Blog.objects.all()
-
-    return render(request,"blog/list_blog.html", {"blogs": blogs, "categorias": category})
+    categories = Category.objects.all()
+    return render(request, "home/home.html", {"form": form, "blogs": blogs, "categories": categories})
 
 
 # Form suscribe for receive new content
@@ -35,6 +30,7 @@ def form_suscribe(request):
             else:
                 messages.success(request, "La Suscripcion al Blog se realizo")
                 form.save()
+                return render(request, "home/layout.html")
 
     else:
         form = SuscribeForm()

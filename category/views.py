@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from .models import Category
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import ListView, CreateView
 
+
+# Display all Categories in the Blog
+class ListCategory(ListView):
+    model = Category
+    template_name = "category/list_category.html"
+    context_object_name = "categories"
 
 # Create a Category
 class CreateCategory(CreateView):
