@@ -16,7 +16,7 @@ home.html - Inicio
 ======================================== */
 
 .name-blog {
-    padding: 50px;
+    padding: 30px;
 }
 
 .description-blog {
@@ -36,6 +36,21 @@ home.html - Inicio
     border-radius: 4px;
     margin: 20px;
     padding: 8px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track > img {
+    width: 1500.5px;
+    flex-shrink: 0;
 }
 
 /* ========================================
@@ -64,14 +79,10 @@ blog/list_blog.html - Blog creados
     display: inline-block;
     margin-bottom: 100px;
     padding: 20px;
-    width: 310px;
-    height: 480px;
+    width: 290px;
+    height: 380px;
     text-align: left;
     vertical-align: top;
-}
-
-.blog > .name-blog {
-    text-align: center;
 }
 
 .detail-blog {
@@ -80,7 +91,7 @@ blog/list_blog.html - Blog creados
     padding: 8px;
     position: relative;
     left: 90px;
-    top: 55px;
+    top: 30px;
     text-decoration: none;
 }
 
@@ -105,8 +116,8 @@ blog/blog_detail.html - Detalles del Blog
     width: 600px;
 }
 
-.content-blog > h3 {
-    text-align: left;
+.content-blog > .blog-name {
+    text-align: center;
 }
 
 .content-blog > img {

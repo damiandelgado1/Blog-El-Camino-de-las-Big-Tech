@@ -41,7 +41,7 @@ def filter_blog(request, category):
     blog = Blog.objects.filter(category__name_category=category)
 
     if blog.exists():
-        blog_data = list(blog.values("name", "preview", "category", "content", "created_at"))
+        blog_data = list(blog.values("id", "name", "preview", "category", "content", "created_at"))
         return JsonResponse({"blogs": blog_data})
     else:
         return JsonResponse({"blogs": [], "mensaje": "No hay blogs en esta categoria"})

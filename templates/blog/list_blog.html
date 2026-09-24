@@ -5,12 +5,12 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
-<section class="blogs">
+<section id="blog" class="blogs">
 
     {% for blog in blogs %}
 
         <article class="blog">
-            <h3 class="name-blog"> {{ blog.name }} </h3>
+            <h3 class="blog-name"> {{ blog.name }} </h3>
             <img src="{{ blog.image.url }}" width="300">
             <p> {{ blog.preview }} </p>
             <p> Categoria: {{ blog.category }} </p>

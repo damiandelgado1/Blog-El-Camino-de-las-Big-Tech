@@ -16,24 +16,26 @@
     <header>
         {% include '_includes/header.html' %}
     </header>
-
+    
     <!-- Main content of the Blog -->
     <main>
         {% block content %}{% endblock %}
     </main>
-
+    
     <!-- Display the Blog's by site -->
     <section>
         {% include 'category/list_category.html' %}
-
+        
         <h3 class="display-blogs"> BLOGS </h3>
         {% include 'blog/list_blog.html' %}
     </section>
-
+    
     <!-- Footer with suscribe form and copyright -->
     <footer class="pie-page">
         {% include 'home/form.html' %}
         {% include '_includes/footer.html' %}
     </footer>
+
+    <script src="{% static 'js/carousel.js' %}" defer></script>
 </body>
 </html>
